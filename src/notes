@@ -1,0 +1,10 @@
+
+Screen
+
+3 txtFields
+	get 3 sizes of sides;
+1 button :	
+	calc triangle
+		when pressed = calc 3 sides and return answer in Lbl;
+	
+	
