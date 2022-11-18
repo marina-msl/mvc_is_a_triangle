@@ -1,4 +1,4 @@
-
+==> Steps to Following!
 Screen:
 
 [x]3 txtFields
@@ -19,6 +19,11 @@ ____________________
 => 	"Don’t be afraid to make a name long. A long descriptive name is better than a short
 enigmatic name. A long descriptive name is better than a long descriptive comment."
 
+
+- Implementing the mask of text fields data
+- Error to press the button with no datas on text fields
+- UnitTests
+- 
 
 Watch:
 https://www.youtube.com/watch?v=7EmboKQH8lM&list=PLmmYSbUCWJ4x1GO839azG_BBw8rkh-zOj
