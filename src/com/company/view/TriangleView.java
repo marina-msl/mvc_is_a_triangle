@@ -16,11 +16,11 @@ import com.company.presentation.IView;
 
 public class TriangleView extends JFrame implements IView {
 
-	private JTextField txtFieldFirstSide;
-	private JTextField txtFieldSecondSide;
-	private JTextField txtFieldThirdSide;
+	private JTextField textFieldFirstSide;
+	private JTextField textFieldSecondSide;
+	private JTextField textFieldThirdSide;
 	private JLabel lblAnswerTriangleType;
-	private JButton btCalcTriangleType;
+	private JButton btCalculateTriangleType;
 	
 	public TriangleView() {
 		super("What kind of triangle is it ?");
@@ -28,7 +28,6 @@ public class TriangleView extends JFrame implements IView {
 		config();
 		pack();
 		setVisible(true);
-
 	}
 
 	private void config() {
@@ -57,29 +56,29 @@ public class TriangleView extends JFrame implements IView {
 		c5.anchor = GridBagConstraints.CENTER;
 		pane.add(lblThirdSide, c5);
 		
-		txtFieldFirstSide = new JTextField();
+		textFieldFirstSide = new JTextField();
 		GridBagConstraints c2 = createGridBagConstraints(1, 0);
 		c2 .anchor = GridBagConstraints.WEST;
 		c2.ipadx = 100;
-		pane.add(txtFieldFirstSide, c2);
+		pane.add(textFieldFirstSide, c2);
 
-		txtFieldSecondSide = new JTextField();
+		textFieldSecondSide = new JTextField();
 		GridBagConstraints c4 = createGridBagConstraints(1, 1);
 		c4.anchor = GridBagConstraints.WEST;
 		c4.ipadx = 100;
-		pane.add(txtFieldSecondSide, c4);
+		pane.add(textFieldSecondSide, c4);
 
-		txtFieldThirdSide = new JTextField();
+		textFieldThirdSide = new JTextField();
 		GridBagConstraints c6 = createGridBagConstraints(1, 2);
 		c6.anchor = GridBagConstraints.WEST;
 		c6.ipadx = 100;
-		pane.add(txtFieldThirdSide, c6);
+		pane.add(textFieldThirdSide, c6);
 
-		btCalcTriangleType = new JButton("Calc triangle type");
+		btCalculateTriangleType = new JButton("Calculate the type of triangle");
 		GridBagConstraints c7 = createGridBagConstraints(0, 3);
 		c7.gridwidth = 2;
 		c7.anchor = GridBagConstraints.CENTER;
-		pane.add(btCalcTriangleType, c7);
+		pane.add(btCalculateTriangleType, c7);
 
 		lblAnswerTriangleType = new JLabel();
 		GridBagConstraints c8 = createGridBagConstraints(2, 1);
@@ -107,27 +106,26 @@ public class TriangleView extends JFrame implements IView {
 
 	@Override
 	public String getTxtFirstSide() {
-		return txtFieldFirstSide.getText();
+		return textFieldFirstSide.getText();
 	}
 
 	@Override
 	public String getTxtSecondSide() {
-		return txtFieldSecondSide.getText();
+		return textFieldSecondSide.getText();
 	}
 
 	@Override
 	public String getTxtThirdSide() {
-		return txtFieldThirdSide.getText();
+		return textFieldThirdSide.getText();
 	}
 
 	@Override
-	public void setCalcTriangleActionListener(ActionListener listener) {
-		btCalcTriangleType.addActionListener(listener);
+	public void setCalculateTriangleActionListener(ActionListener listener) {
+		btCalculateTriangleType.addActionListener(listener);
 	}
 
 	@Override
 	public void setText(String text) {
 		lblAnswerTriangleType.setText(text);
 	}
-
 }

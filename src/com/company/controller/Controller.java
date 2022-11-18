@@ -14,7 +14,7 @@ public class Controller {
 	
 	public Controller(IView view) {
 		this.view = view;
-		this.view.setCalcTriangleActionListener(new ButtonCalcTriangle());
+		this.view.setCalculateTriangleActionListener(new ButtonCalcTriangle());
 	}
 
 	class ButtonCalcTriangle implements ActionListener {

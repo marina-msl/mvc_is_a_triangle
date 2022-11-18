@@ -10,6 +10,6 @@ public interface IView {
 	String getTxtSecondSide();
 	String getTxtThirdSide();
 	
-	void setCalcTriangleActionListener(ActionListener listener);
+	void setCalculateTriangleActionListener(ActionListener listener);
 	
 }
