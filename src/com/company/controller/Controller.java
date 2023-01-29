@@ -5,7 +5,9 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
+import com.company.domain.Triangle;
 import com.company.presentation.IView;
+import com.company.validation.TriangleDtoValidation;
 
 public class Controller {
 
@@ -21,28 +23,48 @@ public class Controller {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			double sideOne = Double.parseDouble(view.getTxtFirstSide());
-			double sideTwo = Double.parseDouble(view.getTxtSecondSide());
-			double sideThree = Double.parseDouble(view.getTxtThirdSide());
-			String text = calcTriangle(sideOne, sideTwo, sideThree);
-			view.setText(text);
-		}
-		
-	}
-	
-	
-	private String calcTriangle(double sideOne, double sideTwo, double sideThree) {
-		String text = "";
-		if (sideOne == sideTwo) {
-			if (sideTwo == sideThree) {
-				text = "Equilateral Triangle";
+//			double sideOne = Double.parseDouble(view.getTxtFirstSide());
+//			double sideTwo = Double.parseDouble(view.getTxtSecondSide());
+//			double sideThree = Double.parseDouble(view.getTxtThirdSide());
+			
+			TriangleDto dto = view.getData();
+			
+			if (TriangleDtoValidation.isFieldsValid(dto)) {
+				Triangle triangle = TriangleDto.convert(dto);
+				
+				if (triangle.isTriangle()) {
+					if(triangle.isEquilateral()) {
+						view.setText("Equilateral");
+					} else if (triangle.isIsoceles()) {
+						view.setText("Isoceles");
+					} else {
+						view.setText("Scalene");
+					}
+					
+				} else {
+					view.setText("Is not a triangle!");
+				}
+			} else {
+				view.setText("Fields not valid");
 			}
-		} else if (sideOne == sideThree) {
-			text = "Isosceles Triangle";
-		} else {
-			text = "Scalene Triangle";
+//			String text = calcTriangle(sideOne, sideTwo, sideThree);
+//			view.setText(text);
 		}
-		return text;
 	}
+	
+	
+//	private String calcTriangle(double sideOne, double sideTwo, double sideThree) {
+//		String text = "";
+//		if (sideOne == sideTwo) {
+//			if (sideTwo == sideThree) {
+//				text = "Equilateral Triangle";
+//			}
+//		} else if (sideOne == sideThree) {
+//			text = "Isosceles Triangle";
+//		} else {
+//			text = "Scalene Triangle";
+//		}
+//		return text;
+//	}
 
 }

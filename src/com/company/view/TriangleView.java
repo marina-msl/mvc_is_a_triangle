@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.company.controller.TriangleDto;
 import com.company.presentation.IView;
 
 public class TriangleView extends JFrame implements IView {
@@ -104,20 +105,20 @@ public class TriangleView extends JFrame implements IView {
 		
 	}
 
-	@Override
-	public String getTxtFirstSide() {
-		return textFieldFirstSide.getText();
-	}
-
-	@Override
-	public String getTxtSecondSide() {
-		return textFieldSecondSide.getText();
-	}
-
-	@Override
-	public String getTxtThirdSide() {
-		return textFieldThirdSide.getText();
-	}
+//	@Override
+//	public String getTxtFirstSide() {
+//		return textFieldFirstSide.getText();
+//	}
+//
+//	@Override
+//	public String getTxtSecondSide() {
+//		return textFieldSecondSide.getText();
+//	}
+//
+//	@Override
+//	public String getTxtThirdSide() {
+//		return textFieldThirdSide.getText();
+//	}
 
 	@Override
 	public void setCalculateTriangleActionListener(ActionListener listener) {
@@ -128,4 +129,15 @@ public class TriangleView extends JFrame implements IView {
 	public void setText(String text) {
 		lblAnswerTriangleType.setText(text);
 	}
+
+	@Override
+	public TriangleDto getData() {
+		TriangleDto dto = new TriangleDto();
+		dto.setSideOne(textFieldFirstSide.getText());
+		dto.setSideTwo(textFieldSecondSide.getText());
+		dto.setSideThree(textFieldThirdSide.getText());
+		return dto;
+	}
+
+	
 }
