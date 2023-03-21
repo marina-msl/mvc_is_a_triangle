@@ -1,4 +1,4 @@
-package com.company.view;
+package com.company.view.frame;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -11,7 +11,7 @@ import com.company.presentation.IView;
 
 public class TriangleFrame extends JFrame implements IView {
 	 
-	private SidesView sidesView; 
+	private SidePanel sidePanel; 
 	private ResultPanel resultPanel;
 	private ButtonPanel buttonPanel;
 	
@@ -25,24 +25,21 @@ public class TriangleFrame extends JFrame implements IView {
 	
 	private void config() {
 		setSize(new Dimension(400,300));
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setLocationRelativeTo(null);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	private void buildLayout() {
 	
-		sidesView = new SidesView();
+		sidePanel = new SidePanel();
 		resultPanel = new ResultPanel();
 		buttonPanel = new ButtonPanel();
 		
-		add(sidesView, BorderLayout.WEST);
+		add(sidePanel, BorderLayout.WEST);
 		add(resultPanel, BorderLayout.EAST);
 		add(buttonPanel, BorderLayout.PAGE_END);
 	}
 	
-	public static void main(String[] args) {
-		new TriangleFrame();
-	}
 
 	@Override
 	public void setText(String text) {
@@ -52,9 +49,9 @@ public class TriangleFrame extends JFrame implements IView {
 	@Override
 	public TriangleDto getData() {
 		TriangleDto dto = new TriangleDto();
-		dto.setSideOne(sidesView.getTextFieldSideOne());
-		dto.setSideTwo(sidesView.getTextFieldSideTwo());
-		dto.setSideThree(sidesView.getTextFieldSideThree());
+		dto.setSideOne(sidePanel.getTextFieldSideOne());
+		dto.setSideTwo(sidePanel.getTextFieldSideTwo());
+		dto.setSideThree(sidePanel.getTextFieldSideThree());
 		return dto;
 	}
 

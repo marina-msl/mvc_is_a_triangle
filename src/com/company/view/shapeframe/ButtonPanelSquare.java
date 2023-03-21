@@ -1,24 +1,26 @@
-package com.company.view;
+package com.company.view.shapeframe;
 
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JPanel;
 
-public class ButtonPanel extends JPanel {
+import com.company.view.frame.ButtonPanel;
 
+public class ButtonPanelSquare extends ButtonPanel {
+	
 	private JButton calculateTypeTriangle;
 	
-	public ButtonPanel() {
+	public ButtonPanelSquare() {
 		buildLayout();
 	}
 
 	private void buildLayout() {
-		calculateTypeTriangle = new JButton("Calculate Type of Triangle");
+		calculateTypeTriangle = new JButton("Calculate");
 		add(calculateTypeTriangle);
 	}
 	
 	public void addListenet(ActionListener listener) {
 		calculateTypeTriangle.addActionListener(listener);
 	}
+
 }

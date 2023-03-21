@@ -24,7 +24,6 @@ public class TriangleView extends JFrame implements IView {
 	private JButton btCalculateTriangleType;
 	
 	public TriangleView() {
-		super("What kind of triangle is it ?");
 		buildLayout();
 		config();
 		pack();

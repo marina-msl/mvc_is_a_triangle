@@ -1,18 +1,20 @@
-package com.company.view;
+package com.company.view.shapeframe;
 
 import java.awt.GridLayout;
 
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class SidesView extends JPanel {
+import com.company.view.frame.SidePanel;
+
+public class SidePanelSquare extends SidePanel {
 	
 	JTextField textFieldSideOne;
 	JTextField textFieldSideTwo;
 	JTextField textFieldSideThree;
+	JTextField textFieldSideFour;
 	
-	public SidesView() {
+	public SidePanelSquare() {
 		buildLayout();
 	}
 
@@ -37,6 +39,12 @@ public class SidesView extends JPanel {
 		textFieldSideThree = new JTextField();
 		add(textFieldSideThree);
 		
+		JLabel labelSideFour = new JLabel("Side Four");
+		add(labelSideFour);
+		
+		textFieldSideFour = new JTextField();
+		add(textFieldSideFour);
+		
 	}
 	
 	public String getTextFieldSideOne() {
@@ -49,5 +57,9 @@ public class SidesView extends JPanel {
 	
 	public String getTextFieldSideThree() {
 		return textFieldSideThree.getText();
+	}
+
+	public String getTextFieldSideFour() {
+		return textFieldSideFour.getText();
 	}
 }

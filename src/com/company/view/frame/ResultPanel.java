@@ -1,4 +1,4 @@
-package com.company.view;
+package com.company.view.frame;
 
 import java.awt.BorderLayout;
 
