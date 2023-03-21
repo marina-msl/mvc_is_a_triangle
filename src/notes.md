@@ -1,6 +1,6 @@
-[ ]- Implementing the mask of text fields data
-[ ]- Error to press the button with no datas on text fields
-[ ]- UnitTests
+- [ ]- Implementing the mask of text fields data
+- [ ]- Error to press the button with no datas on text fields
+- [ ]- UnitTests
 
 ______________________________
 - 
