@@ -22,10 +22,9 @@ public class ShapeTabbedPane extends JTabbedPane {
 //	private ButtonPanel buttonPanel;
 	
 	public ShapeTabbedPane() {
-		trianglebuildLayout();
-		squareBuildLayout();
         
         this.setPreferredSize(new Dimension(500, 300));
+        
         this.add("Triangle",  trianglebuildLayout());
         this.setMnemonicAt(0, KeyEvent.VK_1);
         
@@ -52,7 +51,7 @@ public class ShapeTabbedPane extends JTabbedPane {
 		JPanel panel = new JPanel();
 		SidePanel sidesView = new SidePanel();
 		ResultPanel resultPanel = new ResultPanel();
-		ButtonPanel buttonPanel = new ButtonPanel();
+		ButtonPanel buttonPanel = new ButtonPanel("Triangle");
 		
 		panel.add(sidesView, BorderLayout.WEST);
 		panel.add(resultPanel, BorderLayout.EAST);
@@ -63,11 +62,11 @@ public class ShapeTabbedPane extends JTabbedPane {
 	private JComponent squareBuildLayout() {
 		JPanel panel = new JPanel();
 		
-		SidePanelSquare sidesView = new SidePanelSquare();
+		SidePanelSquare sidesViewSquare = new SidePanelSquare();
 		ResultPanelSquare resultPanel = new ResultPanelSquare();
-		ButtonPanelSquare buttonPanel = new ButtonPanelSquare();
+		ButtonPanel buttonPanel = new ButtonPanel("Square");
 		
-		panel.add(sidesView, BorderLayout.WEST);
+		panel.add(sidesViewSquare, BorderLayout.WEST);
 		panel.add(resultPanel, BorderLayout.EAST);
 		panel.add(buttonPanel, BorderLayout.PAGE_END);
 		

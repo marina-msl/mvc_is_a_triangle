@@ -33,7 +33,7 @@ public class TriangleFrame extends JFrame implements IView {
 	
 		sidePanel = new SidePanel();
 		resultPanel = new ResultPanel();
-		buttonPanel = new ButtonPanel();
+		buttonPanel = new ButtonPanel("Triangle");
 		
 		add(sidePanel, BorderLayout.WEST);
 		add(resultPanel, BorderLayout.EAST);

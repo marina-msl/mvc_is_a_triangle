@@ -3,8 +3,6 @@ package com.company.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JOptionPane;
-
 import com.company.domain.Triangle;
 import com.company.presentation.IView;
 import com.company.validation.TriangleDtoValidation;
