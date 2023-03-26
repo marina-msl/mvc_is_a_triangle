@@ -15,6 +15,7 @@ methods we instantiate the panel for both shapes, but the panels are almost the 
 3 amount of text fields and labels on screen. 
 Solve This problem! 
 
+![image](https://user-images.githubusercontent.com/81332287/227812569-6ab3c578-cb99-4c3f-8e46-1ccaed9f3ec5.png)
 
 ____________________________________
 
@@ -36,7 +37,7 @@ ____________________
 	txtFirstSide
 	Reference, Clean Code by Robert C. Martin:
 	 
-=> 	"Don’t be afraid to make a name long. A long descriptive name is better than a short
+=> 	"Donâ€™t be afraid to make a name long. A long descriptive name is better than a short
 enigmatic name. A long descriptive name is better than a long descriptive comment."
 ________________________________________
 
