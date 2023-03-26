@@ -21,9 +21,9 @@ ____________________________________
 
 Screen:
 
-- [x]3 txtFields
+- [x] 3 txtFields
 - [x]	get 3 sizes of sides;
-- [x]1 button :	
+- [x] 1 button :	
 - [x]	calc triangle
 - [x]		when pressed = calc 3 sides and return answer in Label;
 		
@@ -37,7 +37,7 @@ ____________________
 	txtFirstSide
 	Reference, Clean Code by Robert C. Martin:
 	 
-=> 	"Don’t be afraid to make a name long. A long descriptive name is better than a short
+=> 	"Don't be afraid to make a name long. A long descriptive name is better than a short
 enigmatic name. A long descriptive name is better than a long descriptive comment."
 ________________________________________
 
