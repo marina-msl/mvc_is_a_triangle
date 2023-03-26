@@ -1,19 +1,21 @@
 - [ ] Implementing the mask of text fields data
 - [ ] Error to press the button with no datas on text fields
-- [ ] UnitTests
+- [ ] UnitTests!!!
 
 ______________________________
  
-- [ ]- Implement a new Domain = Square
+- [x]- Implement a new Domain = Square
 - [ ]- Get 2 numbers from user
 - [ ]- Answer if it is a square or not
-- [ ]- Draw the UML
+- [ ]- Draw the UML = loading!!
 - [ ] - In ShapeTabbedPane class there are two quite similars methods: buildLayoutTriangle and buildLayoutSquare. In both 
 methods we instantiate the panel for both shapes, but the panels are almost the same, the differences are: 
 1 name of the button, 
 2 answer of the result and
 3 amount of text fields and labels on screen. 
 Solve This problem! 
+
+
 ____________________________________
 
 Screen:

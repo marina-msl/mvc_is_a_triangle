@@ -24,6 +24,7 @@ public class TriangleView extends JFrame implements IView {
 	private JButton btCalculateTriangleType;
 	
 	public TriangleView() {
+		super("Triangle");
 		buildLayout();
 		config();
 		pack();
@@ -91,7 +92,6 @@ public class TriangleView extends JFrame implements IView {
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = column;
 		gbc.gridy = line;
-		gbc.weightx = 1;
 		gbc.gridheight = 1;
 		gbc.fill = GridBagConstraints.NONE;
 		gbc.ipadx = 0;
