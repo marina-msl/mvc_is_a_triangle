@@ -7,9 +7,8 @@
 
 <br> <b> => Suggests are always welcome!</b>
 
+In Node.md are the steps I've been following.
 
-
-<br>== || ===
 
 <br>=> Studying MVC principles and software design principles
 <br>#firstRule: "Don't be a fraid to make a name longe. A long descriptive name is better than a short enigmatic name"
