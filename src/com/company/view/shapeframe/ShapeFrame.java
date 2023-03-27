@@ -11,6 +11,7 @@ import com.company.presentation.IView;
 public class ShapeFrame extends JFrame implements IView{
 
 	public ShapeFrame() {
+		super("Shapes Calculator");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.add(new ShapeTabbedPane(), BorderLayout.CENTER);
 		this.pack();

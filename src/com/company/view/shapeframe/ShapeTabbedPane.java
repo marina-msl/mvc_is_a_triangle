@@ -54,21 +54,22 @@ public class ShapeTabbedPane extends JTabbedPane {
 		JPanel panel = new JPanel();
 		SidePanel sidesView = new SidePanel();
 		ResultPanel resultPanel = new ResultPanel();
-		ButtonPanel buttonPanel = new ButtonPanel("Triangle");
+		ButtonPanel buttonPanel = new ButtonPanel("Calculate the type of triangle");
 		
 		JButton buttonTriangle = new JButton("Info Triangle");
 		buttonTriangle.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new InformationsFrame();
+				new InformationFrame();
 				
 			}
 		});
 		
 		
-		panel.add(sidesView, BorderLayout.WEST);
-		panel.add(resultPanel, BorderLayout.EAST);
+		panel.add(buttonTriangle, BorderLayout.PAGE_START);
+		panel.add(sidesView, BorderLayout.LINE_START);
+		panel.add(resultPanel, BorderLayout.LINE_END);
 		panel.add(buttonPanel, BorderLayout.PAGE_END);
 		return panel;
 	}
