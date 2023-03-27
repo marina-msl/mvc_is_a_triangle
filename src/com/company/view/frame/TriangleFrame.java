@@ -1,5 +1,6 @@
 package com.company.view.frame;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
 
@@ -24,8 +25,8 @@ public class TriangleFrame extends JFrame implements IView {
 	
 	private void config() {
 		setSize(new Dimension(400,300));
-		//setLocationRelativeTo(null);
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	private void buildLayout() {
@@ -34,9 +35,10 @@ public class TriangleFrame extends JFrame implements IView {
 		resultPanel = new ResultPanel();
 		buttonPanel = new ButtonPanel("Calculate the type of the Triangle");
 		
-		add(sidePanel);
-		//add(resultPanel, BorderLayout.LINE_END);
-		//add(buttonPanel, BorderLayout.PAGE_END);
+		
+		add(sidePanel, BorderLayout.LINE_START);
+		add(resultPanel, BorderLayout.LINE_END);
+		add(buttonPanel,BorderLayout.PAGE_END);
 	}
 	
 

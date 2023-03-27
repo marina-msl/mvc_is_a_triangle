@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -20,6 +21,7 @@ public class SidePanel extends JPanel {
 	}
 
 	private void buildLayout() {
+		setBorder(BorderFactory.createEmptyBorder(5,20,5,5));
 		setLayout(new GridBagLayout());
 				
 		
@@ -44,16 +46,16 @@ public class SidePanel extends JPanel {
 		c2.gridy = 0;
 		c2.gridheight = 1;
 		c2.gridwidth = 1;
-		c2.fill = GridBagConstraints.HORIZONTAL;
-		c2.ipadx = 0;
+		c2.fill = GridBagConstraints.NONE;
+		c2.ipadx = 80;
 		c2.ipady = 0;
 		c2.weightx = 1;
 		c2.weighty = 1;
 		c2.insets = new Insets(5, 5, 5, 5);
-		c2.anchor = GridBagConstraints.LINE_START;
+		c2.anchor = GridBagConstraints.WEST;
 		add(textFieldSideOne, c2);
 		
-		JLabel labelSideTwo = new JLabel("Side two");
+		JLabel labelSideTwo = new JLabel("Side Two");
 		GridBagConstraints c3 = new GridBagConstraints();
 		c3.gridx = 0;
 		c3.gridy = 1;
@@ -74,19 +76,19 @@ public class SidePanel extends JPanel {
 		c4.gridy = 1;
 		c4.gridheight = 1;
 		c4.gridwidth = 1;
-		c4.fill = GridBagConstraints.HORIZONTAL;
-		c4.ipadx = 0;
+		c4.fill = GridBagConstraints.NONE;
+		c4.ipadx = 80;
 		c4.ipady = 0;
 		c4.weightx = 1;
 		c4.weighty = 1;
 		c4.insets = new Insets(5, 5, 5, 5);
-		c4.anchor = GridBagConstraints.LINE_START; 
+		c4.anchor = GridBagConstraints.WEST; 
 		add(textFieldSideTwo, c4);
 		
-		JLabel labelSideThree = new JLabel("Side three");
+		JLabel labelSideThree = new JLabel("Side Three");
 		GridBagConstraints c5 = new GridBagConstraints();
-		c5.gridy = 0;
-		c5.gridx = 2;
+		c5.gridy = 2;
+		c5.gridx = 0;
 		c5.gridheight = 1;
 		c5.gridwidth = 1;
 		c5.fill = GridBagConstraints.HORIZONTAL;
@@ -100,17 +102,17 @@ public class SidePanel extends JPanel {
 		
 		textFieldSideThree = new JTextField();
 		GridBagConstraints c6 = new GridBagConstraints();
-		c6.gridy = 1;
-		c6.gridx = 2;
+		c6.gridy = 2;
+		c6.gridx = 1;
 		c6.gridheight = 1;
 		c6.gridwidth = 1;
-		c6.fill = GridBagConstraints.HORIZONTAL;
-		c6.ipadx = 0;
+		c6.fill = GridBagConstraints.NONE;
+		c6.ipadx = 80;
 		c6.ipady = 0;
 		c6.weightx = 1;
 		c6.weighty = 1;
 		c6.insets = new Insets(5, 5, 5, 5);
-		c6.anchor = GridBagConstraints.LINE_START; 
+		c6.anchor = GridBagConstraints.WEST; 
 		add(textFieldSideThree, c6);
 		
 	}

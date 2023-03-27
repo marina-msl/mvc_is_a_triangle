@@ -3,9 +3,12 @@ package com.company.view.shapeframe;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -52,6 +55,17 @@ public class ShapeTabbedPane extends JTabbedPane {
 		SidePanel sidesView = new SidePanel();
 		ResultPanel resultPanel = new ResultPanel();
 		ButtonPanel buttonPanel = new ButtonPanel("Triangle");
+		
+		JButton buttonTriangle = new JButton("Info Triangle");
+		buttonTriangle.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new InformationsFrame();
+				
+			}
+		});
+		
 		
 		panel.add(sidesView, BorderLayout.WEST);
 		panel.add(resultPanel, BorderLayout.EAST);

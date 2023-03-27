@@ -3,6 +3,8 @@
 - [ ] UnitTests!!!
 
 ______________________________
+
+- [ ] Application working properly with new Shape Frame:
  
 - [x] Implement a new Domain = Square
 - [ ] Get 2 numbers from user
@@ -15,7 +17,12 @@ methods we instantiate the panel for both shapes, but the panels are almost the 
 3 amount of text fields and labels on screen. 
 Solve This problem! 
 
-![image](https://user-images.githubusercontent.com/81332287/227812569-6ab3c578-cb99-4c3f-8e46-1ccaed9f3ec5.png)
+
+____________________________________
+
+
+
+- [x] ![image](https://user-images.githubusercontent.com/81332287/227812569-6ab3c578-cb99-4c3f-8e46-1ccaed9f3ec5.png)
 
 ____________________________________
 

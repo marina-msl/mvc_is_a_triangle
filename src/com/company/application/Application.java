@@ -10,8 +10,9 @@ public class Application {
 	public static void main(String[] args) {
 
 		//new Controller(new TriangleView());
-		new Controller(new TriangleFrame());
-		//new Controller(new ShapeFrame());
+		//new Controller(new TriangleFrame());
+		
+		new Controller(new ShapeFrame());
 
 	}
 }
