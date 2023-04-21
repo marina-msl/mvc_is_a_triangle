@@ -5,20 +5,20 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public abstract class  ButtonView extends JPanel {
+public abstract class ButtonView extends JPanel {
 	
-	private JButton calculate;
+	private JButton btCalculate;
 	
 	public ButtonView(String name) {
 		buildLayout(name);
 	}
 
 	private void buildLayout(String name) {
-		calculate = new JButton(name);
-		add(calculate);
+		btCalculate = new JButton(name);
+		add(btCalculate);
 	}
 	
-	public void addListenet(ActionListener listener) {
-		calculate.addActionListener(listener);
+	public void addListener(ActionListener listener) {
+		btCalculate.addActionListener(listener);
 	}
 }

@@ -12,9 +12,9 @@ import javax.swing.JTextField;
 
 public class SidePanel extends JPanel {
 	
-	JTextField textFieldSideOne;
-	JTextField textFieldSideTwo;
-	JTextField textFieldSideThree;
+	private JTextField textFieldSideOne;
+	private JTextField textFieldSideTwo;
+	private JTextField textFieldSideThree;
 	
 	public SidePanel() {
 		buildLayout();

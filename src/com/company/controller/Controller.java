@@ -11,7 +11,6 @@ public class Controller {
 
 	private IView view;
 	
-	
 	public Controller(IView view) {
 		this.view = view;
 		this.view.setCalculateTriangleActionListener(new ButtonCalcTriangle());

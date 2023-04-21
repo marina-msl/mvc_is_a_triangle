@@ -2,7 +2,6 @@ package com.company.view.shapeframe;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -10,7 +9,6 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
@@ -20,41 +18,37 @@ import com.company.view.frame.SidePanel;
 
 public class ShapeTabbedPane extends JTabbedPane {
 	
-//	private SidePanel sidesView; 
-//	private ResultPanel resultPanel;
-//	private ButtonPanel buttonPanel;
 	
+	private SidePanel sidePanel; 
+	private ResultPanel resultPanel;
+    private ButtonPanel buttonPanel;
+    
 	public ShapeTabbedPane() {
-        
-        this.setPreferredSize(new Dimension(500, 300));
+		config();
         
         this.add("Triangle",  trianglebuildLayout());
         this.setMnemonicAt(0, KeyEvent.VK_1);
         
-        this.addTab("Square", squareBuildLayout());
-        this.setMnemonicAt(1, KeyEvent.VK_2);
+        ImageIcon icon  = createImageIcon("image/Square.png");
         
+        this.addTab("Square", icon, squareBuildLayout());
+        this.setMnemonicAt(1, KeyEvent.VK_2);
         
         //The following line enables to use scrolling tabs.
         this.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
     }
     
-    protected JComponent makeTextPanel(String text) {
-        JPanel panel = new JPanel(false);
-        panel.setSize(new Dimension(500,500));
-        JLabel filler = new JLabel(text);
-        filler.setHorizontalAlignment(JLabel.CENTER);
-        panel.setLayout(new GridLayout(1, 1));
-        panel.add(filler);
-        return panel;
-    }
-    
-    //Factory
+	private void config() {
+		this.setVisible(true);
+        this.setPreferredSize(new Dimension(500, 300));
+	}
+
 	private JComponent trianglebuildLayout() {
 		JPanel panel = new JPanel();
-		SidePanel sidesView = new SidePanel();
-		ResultPanel resultPanel = new ResultPanel();
-		ButtonPanel buttonPanel = new ButtonPanel("Calculate the type of triangle");
+		
+		sidePanel = new SidePanel();
+		resultPanel = new ResultPanel();
+		buttonPanel = new ButtonPanel("Calculate the type of triangle");
 		
 		JButton buttonTriangle = new JButton("Info Triangle");
 		buttonTriangle.addActionListener(new ActionListener() {
@@ -66,11 +60,11 @@ public class ShapeTabbedPane extends JTabbedPane {
 			}
 		});
 		
-		
 		panel.add(buttonTriangle, BorderLayout.PAGE_START);
-		panel.add(sidesView, BorderLayout.LINE_START);
+		panel.add(sidePanel, BorderLayout.LINE_START);
 		panel.add(resultPanel, BorderLayout.LINE_END);
 		panel.add(buttonPanel, BorderLayout.PAGE_END);
+		
 		return panel;
 	}
 	
@@ -79,11 +73,11 @@ public class ShapeTabbedPane extends JTabbedPane {
 		
 		SidePanelSquare sidesViewSquare = new SidePanelSquare();
 		ResultPanelSquare resultPanel = new ResultPanelSquare();
-		ButtonPanel buttonPanel = new ButtonPanel("Square");
+		//buttonPanel = new ButtonPanel("Square");
 		
 		panel.add(sidesViewSquare, BorderLayout.WEST);
 		panel.add(resultPanel, BorderLayout.EAST);
-		panel.add(buttonPanel, BorderLayout.PAGE_END);
+		//panel.add(buttonPanel, BorderLayout.PAGE_END);
 		
 		return panel;
 	}
@@ -98,4 +92,24 @@ public class ShapeTabbedPane extends JTabbedPane {
             return null;
         }
     }
+
+	public String getTextFieldSideOne() {
+		return sidePanel.getTextFieldSideOne();
+	}
+	
+	public String getTextFieldSideTwo() {
+		return sidePanel.getTextFieldSideTwo();
+	}
+	
+	public String getTextFieldSideThree() {
+		return sidePanel.getTextFieldSideThree();
+	}
+	
+	public void setActionListener(ActionListener listener) {
+		buttonPanel.addListener(listener);
+	}
+
+	public void setResultText(String text) {
+		resultPanel.setText(text);
+	}
 }

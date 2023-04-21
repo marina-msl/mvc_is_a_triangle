@@ -16,17 +16,17 @@ public class TriangleFrame extends JFrame implements IView {
 	private ButtonPanel buttonPanel;
 	
 	public TriangleFrame() {
-		super("What king of triangle is it?");
+		super("What type of triangle is it?");
 		buildLayout();
 		pack();
 		config();
-		setVisible(true);
 	}
 	
 	private void config() {
 		setSize(new Dimension(400,300));
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
 	}
 
 	private void buildLayout() {
@@ -58,6 +58,6 @@ public class TriangleFrame extends JFrame implements IView {
 
 	@Override
 	public void setCalculateTriangleActionListener(ActionListener listener) {
-		buttonPanel.addListenet(listener);
+		buttonPanel.addListener(listener);
 	}
 }

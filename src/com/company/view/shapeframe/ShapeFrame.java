@@ -8,32 +8,42 @@ import javax.swing.JFrame;
 import com.company.controller.TriangleDto;
 import com.company.presentation.IView;
 
-public class ShapeFrame extends JFrame implements IView{
+public class ShapeFrame extends JFrame implements IView {
 
+	private ShapeTabbedPane shapeTabbedPane;
+	
 	public ShapeFrame() {
 		super("Shapes Calculator");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.add(new ShapeTabbedPane(), BorderLayout.CENTER);
+		buildLayout();
 		this.pack();
 		this.setVisible(true);
 	}
 
+	
+	private void buildLayout() {
+		shapeTabbedPane = new ShapeTabbedPane();
+		this.add(shapeTabbedPane, BorderLayout.CENTER);
+	}
+
+
 	@Override
 	public void setText(String text) {
-		// TODO Auto-generated method stub
+		this.shapeTabbedPane.setResultText(text);
 		
 	}
 
 	@Override
 	public TriangleDto getData() {
-		// TODO Auto-generated method stub
-		return null;
+		TriangleDto dto = new TriangleDto();
+		dto.setSideOne(shapeTabbedPane.getTextFieldSideOne());
+		dto.setSideTwo(shapeTabbedPane.getTextFieldSideTwo());
+		dto.setSideThree(shapeTabbedPane.getTextFieldSideThree());
+		return dto;
 	}
 
 	@Override
 	public void setCalculateTriangleActionListener(ActionListener listener) {
-		// TODO Auto-generated method stub
-		
+		this.shapeTabbedPane.setActionListener(listener);
 	}
-
 }
